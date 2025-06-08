@@ -1,16 +1,16 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import HeroText from "../components/HeroText";
 import ParallaxBackground from "../components/ParallaxBackground";
-import { Float } from "@react-three/drei";
-
+import { Float, PerformanceMonitor } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
-import { Suspense } from "react";
-import { easing } from "maath";
+import { Suspense, useState } from "react";
 import Loader from "../components/Loader";
 import { Character } from "../components/Character";
 
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 });
+  const [dpr, setDpr] = useState([1, 1.5]);
+
   return (
     <section
       className="flex items-start justify-center min-h-screen overflow-hidden md:items-start md:justify-start c-space"
@@ -22,12 +22,22 @@ const Hero = () => {
         className="absolute inset-0"
         style={{ width: "100vw", height: "100vh" }}
       >
-        <Canvas camera={{ position: [0, 1, 3] }}>
+        <Canvas
+          dpr={dpr}
+          gl={{ antialias: false }}
+          shadows={false}
+          camera={{ position: [0, 1, 3], fov: 50 }}
+        >
+          <PerformanceMonitor
+            onChange={({ factor }) => {
+              if (factor < 0.8) setDpr([0.75, 1]);
+            }}
+          />
           <Suspense fallback={<Loader />}>
             <Float>
               <Character
-                scale={isMobile && 0.2}
-                position={isMobile && [0, -1.5, 0]}
+                scale={isMobile ? 0.15 : 0.2}
+                position={isMobile ? [0, -1, 0] : [1.2, -1.3, -0.5]}
               />
             </Float>
             <Rig />
@@ -37,14 +47,13 @@ const Hero = () => {
     </section>
   );
 };
+
 function Rig() {
   return useFrame((state, delta) => {
-    easing.damp3(
-      state.camera.position,
-      [state.mouse.x / 10, 1 + state.mouse.y / 10, 3],
-      0.5,
-      delta
-    );
+    const x = state.mouse.x / 10;
+    const y = 1 + state.mouse.y / 10;
+    state.camera.position.lerp({ x, y, z: 3 }, 0.05);
   });
 }
+
 export default Hero;
