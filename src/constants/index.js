@@ -1,18 +1,16 @@
 export const myProjects = [
   {
     id: 1,
-    title: "E-commerce Platform",
+    title: "Kickscrate Website",
     description:
-      "Facilitates purchases from international websites like Amazon and eBay, allowing customers to shop from these sites and have products delivered domestically.",
+      "Kickscrate is a modern, responsive e-commerce landing page. It is designed to showcase premium running shoes with a clean, stylish, and dynamic user interface that emphasizes user engagement and visual appeal. ",
     subDescription: [
-      "Built a scalable application with ASP.NET Core MVC, integrating global platforms like Amazon for domestic delivery.",
-      "Implemented secure authentication and database management using ASP.NET Core Identity and Entity Framework Core.",
-      "Designed a responsive frontend with Tailwind CSS, enhancing user experience.",
-      "Added payment systems, localization, and product filtering for functionality improvements.",
+      "Designed a responsive frontend with React and Tailwind CSS, enhancing user experience.",
+      "Implementing animation using frammer motion, to make it look interactive design",
     ],
-    href: "",
+    href: "https://kickscratecollection.vercel.app/",
     logo: "",
-    image: "/assets/projects/accessories.jpg",
+    image: "/assets/projects/kickscrate-app.jpg",
     tags: [
       {
         id: 1,
@@ -21,18 +19,13 @@ export const myProjects = [
       },
       {
         id: 2,
-        name: "Laravel",
-        path: "/assets/logos/laravel-2.svg",
+        name: "Frammer Motion",
+        path: "/assets/logos/framer.svg",
       },
       {
         id: 3,
         name: "TailwindCSS",
         path: "/assets/logos/tailwindcss.svg",
-      },
-      {
-        id: 4,
-        name: "MySQL",
-        path: "/assets/logos/mysql.svg",
       },
     ],
   },
