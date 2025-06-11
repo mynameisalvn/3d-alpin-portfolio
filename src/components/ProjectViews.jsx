@@ -41,9 +41,12 @@ const ProjectViews = ({
                 />
               ))}
             </div>
-            <a className="inline-flex items-center gap-1 font-medium hover-animatiuon cursor-pointer hover-animation">
+            <a
+              className="inline-flex items-center gap-1 font-medium hover-animatiuon cursor-pointer hover-animation"
+              href={href}
+            >
               View Project
-              <img src="assets/arrow-up.svg" className="size-4" href={href} />
+              <img src="assets/arrow-up.svg" className="size-4" />
             </a>
           </div>
         </div>
