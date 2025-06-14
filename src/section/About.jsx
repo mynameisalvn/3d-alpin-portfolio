@@ -106,10 +106,10 @@ const About = () => {
             >
               <source src="assets/stars-rotate.mp4" type="video/mp4" />
             </video>
-            <p className="text-4xl font-bold text-white mb-5 mt-10">
+            <p className="text-4xl font-bold text-white mb-5 mt-8">
               Tech Stack
             </p>
-            <p className="subtext">
+            <p className="text-sm text-pretty">
               I’m actively exploring and learning different technologies that
               help bring ideas to life on the web with some tech stack i used.
             </p>
