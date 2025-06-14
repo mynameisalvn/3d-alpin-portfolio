@@ -3,12 +3,20 @@ import Card from "../components/Card";
 import { Globe } from "../components/globe";
 import CopyEmailButton from "../components/CopyEmailButton";
 import { Frameworks } from "../components/Frameworks";
+import { motion } from "motion/react";
 
 const About = () => {
   const grid2Container = useRef();
   return (
     <section className="c-space section-spacing" id="about">
-      <h2 className="text-heading">About Me</h2>
+      <motion.h2
+        className="text-heading"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        About Me
+      </motion.h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
         {/* Grid 1 */}
         <div className="flex items-end grid-default-color grid-1">
@@ -19,11 +27,11 @@ const About = () => {
             playsInline
             className="absolute inset-0 w-full h-full object-cover opacity-20"
           >
-            <source src="assets/rocket-1.mp4" type="video/mp4" />
+            <source src="assets/falling-stars.mp4" type="video/mp4" />
           </video>
 
           <div className="z-10">
-            <p className="text-5xl">My Profile</p>
+            <p className="text-5xl font-bold mb-5 text-white">My Profile</p>
             <p className="subtext">
               My approach to development focuses on creating clean, efficient,
               and user-friendly solutions. I enjoy tackling complex problems and
@@ -88,8 +96,19 @@ const About = () => {
 
         {/* Grid 3 */}
         <div className="grid-default-color grid-3">
-          <div className="z-10 w-[40%]">
-            <p className="headtext">Tech Stack</p>
+          <div className="z-10 w-[50%]">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover opacity-45"
+            >
+              <source src="assets/stars-rotate.mp4" type="video/mp4" />
+            </video>
+            <p className="text-5xl font-bold text-white mb-4 mt-10">
+              Tech Stack
+            </p>
             <p className="subtext">
               I’m actively exploring and learning different technologies that
               help bring ideas to life on the web with some tech stack i used.
@@ -101,21 +120,30 @@ const About = () => {
         </div>
 
         {/* Grid 4 */}
-        <div className="grid-special-color grid-4">
+        <div className="grid-black-color grid-4">
           <div className="flex flex-col items-center justify-center gap-4 size-full">
             <p className="text-center headtext">
               Do you want to collab together ?
             </p>
+            <div className="flex gap-3">
+              <a href="https://www.linkedin.com/in/mynameisalpin/">
+                <img src="/assets/socials/linkedIn.svg" alt="linkedin" />
+              </a>
+              <a href="https://github.com/mynameisalvn">
+                <img src="/assets/socials/github.svg" alt="github" />
+              </a>
+              <a href="https://www.instagram.com/a.rzha/">
+                <img src="/assets/socials/instagram.svg" alt="github" />
+              </a>
+            </div>
             <CopyEmailButton />
           </div>
         </div>
         {/* Grid 5 */}
         <div className="grid-black-color grid-5">
           <div className="z-10 w-[50%]">
-            <p className="headtext">Time Zone</p>
-            <p className="subtext">
-              I'm based in Indonesia. Currently open to work
-            </p>
+            <p className="text-5xl font-bold mb-5">Based in Indonesia</p>
+            <p className="text-lg font-extralight">Currently open to work 🚀</p>
           </div>
           <figure className="absolute left-[30%] top-[10%]">
             <Globe />

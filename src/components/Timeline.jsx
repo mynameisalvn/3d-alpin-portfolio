@@ -24,7 +24,14 @@ export const Timeline = ({ data }) => {
 
   return (
     <div className="c-space" ref={containerRef}>
-      <h2 className="text-heading">My Work Experience</h2>
+      <motion.h2
+        className="text-heading"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        My Work Experience
+      </motion.h2>
       <div ref={ref} className="relative pb-20">
         {data.map((item, index) => (
           <div

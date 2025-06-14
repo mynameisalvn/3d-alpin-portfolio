@@ -20,7 +20,14 @@ const Projects = () => {
       className="relative c-space section-spacing"
       id="project"
     >
-      <h2 className="text-heading">My Projects</h2>
+      <motion.h2
+        className="text-heading"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        My Projects
+      </motion.h2>
       <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-12 h-[1px] w-full" />
       {myProjects.map((project) => (
         <Project key={project.id} {...project} setPreview={setPreview} />

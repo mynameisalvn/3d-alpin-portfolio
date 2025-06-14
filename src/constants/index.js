@@ -1,7 +1,7 @@
 export const myProjects = [
   {
     id: 1,
-    title: "Kickscrate Website",
+    title: "Shoes Website",
     description:
       "Kickscrate is a modern, responsive e-commerce landing page. It is designed to showcase premium running shoes with a clean, stylish, and dynamic user interface that emphasizes user engagement and visual appeal. ",
     subDescription: [
@@ -31,38 +31,36 @@ export const myProjects = [
   },
   {
     id: 2,
-    title: "Store Inventory Management",
+    title: "Ichiman Sushi Website",
     description:
-      "A secure authentication and authorization system using Auth0 for seamless user management.",
+      "Ichiman Sushi is a clean and visually inviting landing page for a Japanese restaurant. It blends traditional Japanese aesthetics with modern web design to promote authentic cuisine and engage visitors effectively. ",
     subDescription: [
-      "Integrated Auth0 for authentication, supporting OAuth, JWT, and multi-factor authentication.",
-      "Implemented role-based access control (RBAC) for fine-grained user permissions.",
-      "Developed a React-based frontend with Tailwind CSS for a sleek user experience.",
-      "Connected to a secure SQLite database for user data storage.",
+      "Built with a two-tone hero layout using HTML and CSS also Javascript for animation.",
+      "Integrated Japanese typography and visual elements to reflect cultural authenticity and enhance brand identity.",
     ],
-    href: "",
+    href: "https://ichimansushi.netlify.app/",
     logo: "",
-    image: "/assets/projects/auth-system.jpg",
+    image: "/assets/projects/ichiman-sushi.jpg",
     tags: [
       {
         id: 1,
-        name: "Auth0",
-        path: "/assets/logos/auth0.svg",
+        name: "HTML",
+        path: "/assets/logos/html5.svg",
       },
       {
         id: 2,
-        name: "React",
-        path: "/assets/logos/react.svg",
+        name: "CSS",
+        path: "/assets/logos/css3.svg",
       },
       {
         id: 3,
-        name: "SQLite",
-        path: "/assets/logos/sqlite.svg",
+        name: "JavaScript",
+        path: "/assets/logos/javascript.svg",
       },
       {
         id: 4,
-        name: "TailwindCSS",
-        path: "/assets/logos/tailwindcss.svg",
+        name: "Vite.js",
+        path: "/assets/logos/vitejs.svg",
       },
     ],
   },
@@ -247,7 +245,7 @@ export const experiences = [
     job: "Self-Employed",
     date: "2025-Present",
     contents: [
-      "Created a personal portfolio using Three.js, React, Vite, and WebAPI to showcase technical expertise.",
+      "Created a project using Next.js, React, Laravel, and WebAPI to showcase technical expertise.",
       "Continuously enhancing technical skills and expanding expertise in modern web development and back-end technologies.",
     ],
   },
