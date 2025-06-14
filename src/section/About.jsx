@@ -106,7 +106,7 @@ const About = () => {
             >
               <source src="assets/stars-rotate.mp4" type="video/mp4" />
             </video>
-            <p className="text-5xl font-bold text-white mb-4 mt-10">
+            <p className="text-4xl font-bold text-white mb-5 mt-10">
               Tech Stack
             </p>
             <p className="subtext">
@@ -142,8 +142,8 @@ const About = () => {
         {/* Grid 5 */}
         <div className="grid-black-color grid-5">
           <div className="z-10 w-[50%]">
-            <p className="text-5xl font-bold mb-5">Based in Indonesia</p>
-            <p className="text-lg font-extralight">Currently open to work 🚀</p>
+            <p className="text-4xl font-bold mt-5 mb-5">Based in Indonesia</p>
+            <p className="font-extralight">Currently open to work</p>
           </div>
           <figure className="absolute left-[30%] top-[10%]">
             <Globe />
