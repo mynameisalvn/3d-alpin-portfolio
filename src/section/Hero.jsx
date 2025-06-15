@@ -1,14 +1,12 @@
-import { Canvas, useFrame } from "@react-three/fiber";
 import HeroText from "../components/HeroText";
 import ParallaxBackground from "../components/ParallaxBackground";
-import { Float, PerformanceMonitor } from "@react-three/drei";
 import { useMediaQuery } from "react-responsive";
 import { Suspense, useState } from "react";
 import Loader from "../components/Loader";
 import { Character } from "../components/Character";
 
 const Hero = () => {
-  // const isMobile = useMediaQuery({ maxWidth: 853 });
+  const isMobile = useMediaQuery({ maxWidth: 768 });
   // const [dpr, setDpr] = useState([1, 1.5]);
 
   return (
@@ -17,7 +15,7 @@ const Hero = () => {
       id="home"
     >
       <HeroText />
-      <ParallaxBackground />
+      {!isMobile && <ParallaxBackground />}
       {/* <figure
         className="absolute inset-0"
         style={{ width: "100vw", height: "100vh" }}
