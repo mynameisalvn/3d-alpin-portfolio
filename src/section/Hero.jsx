@@ -6,7 +6,7 @@ import Loader from "../components/Loader";
 import { Character } from "../components/Character";
 
 const Hero = () => {
-  const isMobile = useMediaQuery({ maxWidth: 768 });
+  // const isMobile = useMediaQuery({ maxWidth: 768 });
   // const [dpr, setDpr] = useState([1, 1.5]);
 
   return (
@@ -15,7 +15,7 @@ const Hero = () => {
       id="home"
     >
       <HeroText />
-      {!isMobile && <ParallaxBackground />}
+      <ParallaxBackground />
       {/* <figure
         className="absolute inset-0"
         style={{ width: "100vw", height: "100vh" }}
