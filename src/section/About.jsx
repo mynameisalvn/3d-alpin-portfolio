@@ -31,7 +31,9 @@ const About = () => {
           </video>
 
           <div className="z-10">
-            <p className="text-5xl font-bold mb-5 text-white">My Profile</p>
+            <p className="text-3xl md:text-5xl font-bold mb-5 text-white">
+              My Profile
+            </p>
             <p className="subtext">
               My approach to development focuses on creating clean, efficient,
               and user-friendly solutions. I enjoy tackling complex problems and
@@ -95,24 +97,16 @@ const About = () => {
         </div>
 
         {/* Grid 3 */}
-        <div className="grid-black-color grid-3">
-          <div className="z-10 w-[50%]">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute inset-0 w-full h-full object-cover opacity-45"
-            >
-              <source src="assets/stars-rotate.mp4" type="video/mp4" />
-            </video>
-            <p className="text-4xl font-semibold text-white my-15">
-              TECH STACKS
+        <div className="grid-default-color grid-3">
+          <div className="items-center">
+            <p className="text-5xl font-bold mt-5 md:mt-20 mb-2">
+              Based in Indonesia
             </p>
+            <p className="subtext">Currently open to work 📈</p>
           </div>
-          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
-            <Frameworks />
-          </div>
+          {/* <figure className="absolute left-[30%] top-[10%]">
+            <Globe />
+          </figure> */}
         </div>
 
         {/* Grid 4 */}
@@ -135,15 +129,26 @@ const About = () => {
             <CopyEmailButton />
           </div>
         </div>
+
         {/* Grid 5 */}
         <div className="grid-black-color grid-5">
-          <div className="z-10 w-[50%]">
-            <p className="text-4xl font-bold mt-5 mb-5">Based in Indonesia</p>
-            <p className="font-extralight">Currently open to work</p>
+          <div className="z-10 w-[50%] md:w-[80%]">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover opacity-45"
+            >
+              <source src="assets/stars-rotate.mp4" type="video/mp4" />
+            </video>
+            <p className="sm:text-4xl text-3xl font-semibold text-white my-15 md:my-25 -mx-3 md:mx-14 lg:mx-22 sm:mx-10">
+              TECH STACKS
+            </p>
           </div>
-          <figure className="absolute left-[30%] top-[10%]">
-            <Globe />
-          </figure>
+          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
+            <Frameworks />
+          </div>
         </div>
       </div>
     </section>
