@@ -1,9 +1,9 @@
 import HeroText from "../components/HeroText";
 import ParallaxBackground from "../components/ParallaxBackground";
-import { useMediaQuery } from "react-responsive";
-import { Suspense, useState } from "react";
-import Loader from "../components/Loader";
-import { Character } from "../components/Character";
+// import { useMediaQuery } from "react-responsive";
+// import { Suspense, useState } from "react";
+// import Loader from "../components/Loader";
+// import { Character } from "../components/Character";
 
 const Hero = () => {
   // const isMobile = useMediaQuery({ maxWidth: 768 });
