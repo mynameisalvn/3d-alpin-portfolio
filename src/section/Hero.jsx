@@ -8,8 +8,8 @@ import Loader from "../components/Loader";
 import { Character } from "../components/Character";
 
 const Hero = () => {
-  const isMobile = useMediaQuery({ maxWidth: 853 });
-  const [dpr, setDpr] = useState([1, 1.5]);
+  // const isMobile = useMediaQuery({ maxWidth: 853 });
+  // const [dpr, setDpr] = useState([1, 1.5]);
 
   return (
     <section
@@ -18,11 +18,11 @@ const Hero = () => {
     >
       <HeroText />
       <ParallaxBackground />
-      <figure
+      {/* <figure
         className="absolute inset-0"
         style={{ width: "100vw", height: "100vh" }}
-      >
-        <Canvas
+      > */}
+      {/* <Canvas
           dpr={dpr}
           gl={{ antialias: false }}
           shadows={false}
@@ -42,18 +42,18 @@ const Hero = () => {
             </Float>
             <Rig />
           </Suspense>
-        </Canvas>
-      </figure>
+        </Canvas> */}
+      {/* </figure> */}
     </section>
   );
 };
 
-function Rig() {
-  return useFrame((state, delta) => {
-    const x = state.mouse.x / 10;
-    const y = 1 + state.mouse.y / 10;
-    state.camera.position.lerp({ x, y, z: 3 }, 0.05);
-  });
-}
+// function Rig() {
+//   return useFrame((state, delta) => {
+//     const x = state.mouse.x / 10;
+//     const y = 1 + state.mouse.y / 10;
+//     state.camera.position.lerp({ x, y, z: 3 }, 0.05);
+//   });
+// }
 
 export default Hero;

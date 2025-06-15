@@ -3,10 +3,10 @@ import { motion, useScroll, useSpring, useTransform } from "motion/react";
 function ParallaxBackground() {
   const { scrollYProgress } = useScroll();
   const x = useSpring(scrollYProgress, { damping: 50 });
-  const mountain3Y = useTransform(x, [0, 0.5], ["0%", "70%"]);
-  const planetsX = useTransform(x, [0, 0.5], ["0%", "-20%"]);
-  const mountain2Y = useTransform(x, [0, 0.5], ["0%", "30%"]);
-  const mountain1Y = useTransform(x, [0, 0.5], ["0%", "0%"]);
+  const layer3Y = useTransform(x, [0, 0.5], ["0%", "70%"]);
+  const planetsY = useTransform(x, [0, 0.5], ["-10%", "80%"]);
+  const layer2X = useTransform(x, [0, 0.5], ["0%", "-50%"]);
+  const layer1Y = useTransform(x, [0, 0.5], ["0%", "0%"]);
 
   return (
     <section className="absolute inset-0 bg-black/40">
@@ -15,29 +15,29 @@ function ParallaxBackground() {
         <div
           className="absolute inset-0 w-full h-screen -z-50"
           style={{
-            backgroundImage: "url('assets/sky.jpg')",
+            backgroundImage: "url('assets/night-2.jpg')",
             backgroundPosition: "bottom",
             backgroundSize: "cover",
           }}
         />
         {/* Layer 3*/}
-        <motion.div
+        {/* <motion.div
           className="absolute inset-0 -z-40"
-          style={{
-            backgroundImage: "url('assets/sun.png')",
-            backgroundPosition: "bottom",
-            backgroundSize: "cover",
-            y: mountain3Y,
-          }}
-        />
-        {/* Planet*/}
-        <motion.div
-          className="absolute inset-0 -z-30"
           style={{
             backgroundImage: "url('assets/planets.png')",
             backgroundPosition: "bottom",
             backgroundSize: "cover",
-            x: planetsX,
+            y: mountain3Y,
+          }}
+        /> */}
+        {/* Planet*/}
+        <motion.div
+          className="absolute inset-0 -z-30"
+          style={{
+            backgroundImage: "url('assets/sun.png')",
+            backgroundPosition: "bottom",
+            backgroundSize: "cover",
+            y: planetsY,
           }}
         />
         {/* Layer 2*/}
@@ -47,19 +47,19 @@ function ParallaxBackground() {
             backgroundImage: "url('assets/stars.png')",
             backgroundPosition: "bottom",
             backgroundSize: "cover",
-            y: mountain2Y,
+            x: layer2X,
           }}
         />
         {/* Layer 1*/}
-        <motion.div
+        {/* <motion.div
           className="absolute inset-0 -z-30"
           style={{
-            backgroundImage: "url('assets/mountain-1.png')",
+            backgroundImage: "url('assets/stars.png')",
             backgroundPosition: "bottom",
             backgroundSize: "cover",
             y: mountain1Y,
           }}
-        />
+        /> */}
       </div>
     </section>
   );
