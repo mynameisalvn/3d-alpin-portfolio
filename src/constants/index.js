@@ -66,33 +66,32 @@ export const myProjects = [
   },
   {
     id: 3,
-    title: "Blazor Web App",
-    description:
-      "A modern, interactive web application built with Blazor WebAssembly and .NET Core.",
+    title: "TIKETin App",
+    description: "A web application ticketing system for complaints.",
     subDescription: [
-      "Developed a fully interactive Single Page Application (SPA) using Blazor WebAssembly.",
-      "Implemented API interactions using .NET Core for a robust backend.",
+      "Developed a responsive web application using Vue.js for a seamless user experience.",
+      "Implemented API interactions using Laravel for backend functionality.",
       "Designed responsive UI components with Tailwind CSS for an enhanced UX.",
-      "Integrated SQLite for efficient client-side database storage.",
+      "Integrated MySQL for efficient client-side database storage.",
     ],
     href: "",
     logo: "",
-    image: "/assets/projects/blazor-app.jpg",
+    image: "/assets/projects/tiketin-web.jpg",
     tags: [
       {
         id: 1,
-        name: "Blazor",
-        path: "/assets/logos/blazor.svg",
+        name: "Laravel",
+        path: "/assets/logos/laravel-2.svg",
       },
       {
         id: 2,
-        name: ".NET Core",
-        path: "/assets/logos/dotnetcore.svg",
+        name: "Vue.js",
+        path: "/assets/logos/vue.svg",
       },
       {
         id: 3,
-        name: "SQLite",
-        path: "/assets/logos/sqlite.svg",
+        name: "MySQL",
+        path: "/assets/logos/mysql.svg",
       },
       {
         id: 4,

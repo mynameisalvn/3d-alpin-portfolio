@@ -13,7 +13,7 @@ function ParallaxBackground() {
         <div
           className="absolute inset-0 w-full h-screen -z-50"
           style={{
-            backgroundImage: "url('assets/night-2.jpg')",
+            backgroundImage: "url('assets/night-2-comp.jpg')",
             backgroundPosition: "bottom",
             backgroundSize: "cover",
           }}
