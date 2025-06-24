@@ -9,7 +9,7 @@ const HeroText = () => {
     visible: { opacity: 1, x: 0 },
   };
   return (
-    <div className="z-10 mt-20 text-center md:mt-70 md:text-left rounded-3xl bg-clip-text">
+    <div className="z-10 mt-25 text-center md:mt-70 md:text-left rounded-3xl bg-clip-text">
       {/* Desktop View*/}
       <div className="flex-col hidden md:flex c-space">
         <motion.h1

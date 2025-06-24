@@ -1,21 +1,31 @@
 import HeroText from "../components/HeroText";
 import ParallaxBackground from "../components/ParallaxBackground";
-// import { useMediaQuery } from "react-responsive";
+import { useMediaQuery } from "react-responsive";
 // import { Suspense, useState } from "react";
 // import Loader from "../components/Loader";
 // import { Character } from "../components/Character";
 
 const Hero = () => {
-  // const isMobile = useMediaQuery({ maxWidth: 768 });
+  const isMobile = useMediaQuery({ maxWidth: 768 });
   // const [dpr, setDpr] = useState([1, 1.5]);
 
   return (
     <section
       className="flex items-start justify-center min-h-screen overflow-hidden md:items-start md:justify-start c-space"
       id="home"
+      style={
+        isMobile
+          ? {
+              backgroundImage: "url('assets/night-2-comp.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              opacity: 0.8,
+            }
+          : {}
+      }
     >
       <HeroText />
-      <ParallaxBackground />
+      {!isMobile && <ParallaxBackground />}
       {/* <figure
         className="absolute inset-0"
         style={{ width: "100vw", height: "100vh" }}
