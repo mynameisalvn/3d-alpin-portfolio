@@ -111,7 +111,7 @@ export const myProjects = [
       "TypeScript for strong typing and better code quality.",
       "Tailwind CSS for styling and responsive design.",
     ],
-    href: "",
+    href: "https://travelyuk.vercel.app/",
     logo: "",
     image: "/assets/projects/travelyuk.jpg",
     tags: [
